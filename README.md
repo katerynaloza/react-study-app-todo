@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+📋 React Checklist App
+React Checklist App — це навчальний проєкт у форматі чекліста, створений для відпрацювання ключових концепцій React:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- JSX
 
-Currently, two official plugins are available:
+- Компоненти
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Props
 
-## Expanding the ESLint configuration
+- State / useState / useEffect
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- useContext
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- useReducer
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- useRef
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- useMemo / useCallback
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Проєкт працює як інтерактивний список, де можна:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Додавати нові пункти.
+
+- Позначати їх як вивчені або невивчені.
+
+- Фільтрувати список (усі / вивчені / невивчені).
+
+- Переглядати прогрес виконання у вигляді лічильника та прогрес-бара.
+
+- Зберігати дані у localStorage, щоб стан не губився після перезавантаження.
+
+🖼️ Інтерфейс
+
+Список завдань з чекбоксами та візуальною індикацією.
+
+Фільтри у вигляді вкладок.
+
+Прогрес-бар з анімацією.
+
+Модальне вікно для додавання нового пункту.
+
+Темний фон і плавні hover-ефекти.
+
+🛠️ Технології
+
+React (TypeScript)
+
+Tailwind CSS для стилізації
+
+React Hooks: useState, useEffect, useContext, useReducer, useRef, useMemo, useCallback
+
+LocalStorage для збереження стану
+
+Portals для модалки
+
+Error Boundaries для стабільності інтерфейсу
